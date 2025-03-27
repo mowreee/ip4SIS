@@ -1,0 +1,79 @@
+.side {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #292828;
+  overflow-x: hidden;
+  padding-top: 350px;
+  transition: width 0.3s;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: large;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #3d3d3d;
+  cursor: pointer;
+}
+
+.sidebar-label {
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .side {
+    width: 200px;
+    padding-top: 200px;
+  }
+
+  .sidebar-item {
+    font-size: medium;
+    padding: 8px 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .side {
+    width: 150px;
+    padding-top: 150px;
+  }
+
+  .sidebar-item {
+    font-size: small;
+    padding: 6px 10px;
+  }
+}
+
+.header-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-student-button {
+  display: block;
+  margin: 10px auto;
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.add-student-button:hover {
+  background-color: #1565c0;
+}

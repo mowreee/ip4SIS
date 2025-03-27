@@ -1,0 +1,80 @@
+.modal-box {
+  width: 500px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.text-field {
+  margin-bottom: 20px;
+}
+
+.submit-button {
+  display: block;
+  margin: 20px auto 0;
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #1565c0;
+}
+
+.add-student-button {
+  display: block;
+  margin: 20px auto;
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.add-student-button:hover {
+  background-color: #1565c0;
+}
+
+.table-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.table-cell {
+  font-size: 14px;
+}
+
+.icon:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #e7e5e5;
+  transform: scale(1.1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+button,
+input,
+table {
+  font-family: 'Poppins', sans-serif;
+}

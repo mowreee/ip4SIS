@@ -1,0 +1,92 @@
+.task-tracker h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 400px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-container #add {
+  width: 150px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+span {
+  max-width: 200px;
+  overflow-wrap: break-word;
+}
+li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.buttons button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons button:first-child {
+  background-color: #007bff;
+  color: white;
+}
+
+.buttons button:first-child:hover {
+  background-color: #0056b3;
+}
+
+.buttons button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.buttons button:last-child:hover {
+  background-color: #c82333;
+}
+:root {
+  --toastify-container-width: fit-content;
+  --toastify-toast-width: 250px;
+  --toastify-toast-offset: 16px;
+}
