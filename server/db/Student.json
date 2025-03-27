@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "idNumber": "",
+    "Firstname": "",
+    "Lastname": "",
+    "Middlename": "",
+    "course": "",
+    "year": ""
+  }
+]
