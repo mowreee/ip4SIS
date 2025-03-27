@@ -17,8 +17,8 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 // Icons
-import DeleteIcon from "@mui/icons-material/DeleteOutlineOutlined";
-import EditIcon from "@mui/icons-material/Edit";
+import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
+import EditNoteIcon from '@mui/icons-material/EditNote';
 
 function Users() {
   const [user, setUser] = useState([]);
@@ -218,15 +218,14 @@ function Users() {
                   </TableCell>
 
                   <TableCell className="table-cell" align="right">
-                    <DeleteIcon
+                    <PersonRemoveIcon
                       className="icon"
                       onClick={() => deleteUser(user.UserId)}
                       style={{
                         marginRight: "10px",
-                        color: "red",
                       }}
                     />
-                    <EditIcon
+                    <EditNoteIcon
                       className="icon"
                       onClick={() => handleEditClick(user)}
                     />

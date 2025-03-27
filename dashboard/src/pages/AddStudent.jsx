@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { TextField, Button, Modal, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material";
-import { DeleteOutlineOutlined as DeleteIcon, Edit as EditIcon } from "@mui/icons-material";
+import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
+import EditNoteIcon from '@mui/icons-material/EditNote';
 import axios from "axios";
 import Sidebar from "./Sidebar";
 import "../styles/AddStudent.css";
@@ -115,8 +116,8 @@ function AddStudent() {
                     <TableCell key={field} className="table-cell" align="right">{student[field]}</TableCell>
                   ))}
                   <TableCell className="table-cell" align="right">
-                    <DeleteIcon className="icon" onClick={() => deleteStudent(student.idNumber)} style={{ marginRight: "10px", color: "red" }} />
-                    <EditIcon className="icon" onClick={() => handleEditClick(student)} />
+                    <PersonRemoveIcon className="icon" onClick={() => deleteStudent(student.idNumber)} style={{ marginRight: "10px" }} />
+                    <EditNoteIcon className="icon" onClick={() => handleEditClick(student)} />
                   </TableCell>
                 </TableRow>
               ))}
