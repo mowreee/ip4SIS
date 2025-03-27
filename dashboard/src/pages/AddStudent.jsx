@@ -43,7 +43,7 @@ function AddStudent() {
       alert("New Student Added");
       setOpen(false);
       fetchStudents();
-      setData({ IdNumber: "", Firstname: "", Lastname: "", Middlename: "", course: "", year: "" });
+      setData({ idNumber: "", Firstname: "", Lastname: "", Middlename: "", course: "", year: "" });
     } catch (error) {
       alert(error.response?.data?.message || "Student Already Exists");
       console.error(error);
@@ -75,7 +75,10 @@ function AddStudent() {
           {["idNumber", "Firstname", "Lastname", "Middlename", "course", "year"].map((field) => (
             <TextField key={field} className="text-field" label={field} name={field} value={data[field]} onChange={handleChange} fullWidth margin="normal" />
           ))}
-          <Button variant="contained" className="submit-button" onClick={handleSubmit}>Submit</Button>
+          <Box className="button-group">
+            <Button variant="contained" className="submit-button" onClick={handleSubmit}>Submit</Button>
+            <Button variant="outlined" className="cancel-button" onClick={() => setOpen(false)}>Cancel</Button>
+          </Box>
         </Box>
       </Modal>
 
@@ -86,7 +89,10 @@ function AddStudent() {
           {["Firstname", "Lastname", "Middlename", "course", "year"].map((field) => (
             <TextField key={field} className="text-field" label={field} name={field} value={data[field]} onChange={handleChange} fullWidth margin="normal" />
           ))}
-          <Button variant="contained" className="submit-button" onClick={handleEditSubmit}>Update</Button>
+          <Box className="button-group">
+            <Button variant="contained" className="submit-button" onClick={handleEditSubmit}>Update</Button>
+            <Button variant="outlined" className="cancel-button" onClick={() => setEditOpen(false)}>Cancel</Button>
+          </Box>
         </Box>
       </Modal>
 
@@ -99,12 +105,11 @@ function AddStudent() {
           </Button>
         </div>
 
-
         <TableContainer className="table-container" component={Paper}>
           <Table sx={{ minWidth: 1000 }} size="small">
             <TableHead className="table-head">
               <TableRow>
-                {["Id Number", "First Name", "Middle Name", "Last Name", "Course", "Year", "Actions"].map((header) => (
+                {["ID Number", "First Name", "Middle Name", "Last Name", "Course", "Year", "Actions"].map((header) => (
                   <TableCell key={header} className="table-cell" align="right">{header}</TableCell>
                 ))}
               </TableRow>

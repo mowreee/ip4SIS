@@ -55,6 +55,12 @@
   font-size: 14px;
 }
 
+.button-container {
+  display: flex;
+  gap: 16px;
+  /* Adjust spacing */
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
