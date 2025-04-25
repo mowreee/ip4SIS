@@ -66,7 +66,7 @@ function Users() {
       <Modal open={open} onClose={() => setOpen(false)}>
         <Box className="modal-box">
           <h2 className="modal-header">Add User</h2>
-          {["UserId", "Firstname", "Lastname", "Middlename", "Username"].map((field) => (
+          {["UserId", "Firstname", "Lastname", "Middlename", "Username", "Password"].map((field) => (
             <TextField key={field} className="text-field" label={field} name={field} value={data[field]} onChange={handleChange} fullWidth margin="normal" />
           ))}
           <Button variant="contained" className="submit-button" onClick={handleSubmit}>Submit</Button>
@@ -77,7 +77,7 @@ function Users() {
       <Modal open={editOpen} onClose={() => setEditOpen(false)}>
         <Box className="modal-box">
           <h2 className="modal-header">Edit User</h2>
-          {["Firstname", "Lastname", "Middlename", "Username"].map((field) => (
+          {["Firstname", "Lastname", "Middlename", "Username", "Password"].map((field) => (
             <TextField key={field} className="text-field" label={field} name={field} value={data[field]} onChange={handleChange} fullWidth margin="normal" />
           ))}
           <Button variant="contained" className="submit-button" onClick={handleEditSubmit}>Update</Button>
@@ -95,7 +95,7 @@ function Users() {
           <Table sx={{ minWidth: 1000 }} size="small">
             <TableHead className="table-head">
               <TableRow>
-                {["User ID", "First Name", "Middle Name", "Last Name", "Username", "Actions"].map(header => (
+                {["User ID", "First Name", "Middle Name", "Last Name", "Username","Password", "Actions"].map(header => (
                   <TableCell key={header} className="table-cell" align="right">{header}</TableCell>
                 ))}
               </TableRow>
@@ -103,7 +103,7 @@ function Users() {
             <TableBody>
               {user.map((user) => (
                 <TableRow className="table-row" key={user.UserId}>
-                  {["UserId", "Firstname", "Middlename", "Lastname", "Username"].map(field => (
+                  {["UserId", "Firstname", "Middlename", "Lastname", "Username","Password"].map(field => (
                     <TableCell key={field} className="table-cell" align="right">{user[field]}</TableCell>
                   ))}
                   <TableCell className="table-cell" align="right">

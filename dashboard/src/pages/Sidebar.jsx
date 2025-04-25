@@ -11,6 +11,7 @@ function Sidebar() {
     { to: "/AddStudent", label: "ADD STUDENT", icon: <PersonAddAlt1Icon /> },
     { to: "/TaskTracker", label: "TASK TRACKER", icon: <AddTaskIcon /> },
     { to: "/Users", label: "USER MANAGEMENT", icon: <GroupAddIcon /> },
+    {to: "/ManageStudent", label: "MANAGE STUDENT", icon: <GroupAddIcon /> }
   ];
 
   return (

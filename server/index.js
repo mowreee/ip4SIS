@@ -5,6 +5,9 @@ const express = require("express");
 const errorHandler = require("./handlers/errorHandler");
 const cors = require("cors");
 
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/SIS");
+
 const app = express();
 
 const getUsers = require("./usercontrollers/getUsers");
@@ -35,6 +38,28 @@ app.patch("/api/updateUser/:UserId", updateUser);
 app.delete("/api/deleteUser/:UserId", deleteUser);
 
 app.use(errorHandler);
+
+app.post("/addstudentmongo", async (req, res) => {
+    try{
+        const { id, firstName, lastName, middleName, course, year } = req.body;
+
+        const newStudent = new Student({
+               
+            id,
+            firstName,
+            lastName,
+            middleName,
+            course,
+            year
+        });
+        
+        await newStudent.save();
+        return res.status(201).json({ message: "Student added successfully" });
+    } catch (error) {
+        console.error("Error adding student:", error);
+        return res.status(500).json({ message: "Internal server error" });
+    }
+});
 
 const port = 1337;
 app.listen(port, () => {
