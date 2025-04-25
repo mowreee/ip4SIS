@@ -4,6 +4,7 @@ require("dotenv").config();
 const express = require("express");
 const errorHandler = require("./handlers/errorHandler");
 const cors = require("cors");
+const Student = require("./models/student.model");
 
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/SIS");
@@ -45,7 +46,7 @@ app.post("/addstudentmongo", async (req, res) => {
 
         const newStudent = new Student({
                
-            id,
+            idNumber,
             firstName,
             lastName,
             middleName,
